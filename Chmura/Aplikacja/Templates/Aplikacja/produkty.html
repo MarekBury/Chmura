@@ -1,0 +1,34 @@
+{% extends 'Aplikacja/main.html' %}
+
+{% block content %}
+
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h5>Produkty</h5>
+				</div>
+				<div class="card card-body">
+					<table class="table">
+						<tr>
+							<th>Produkt</th>
+							<th>Kategoria</th>
+							<th>Cena</th>
+						</tr>
+						
+						{% for i in produkty %}
+							<tr>
+								<td><a href="http://Djangoapp62200.scm.azurewebsites.net/produkt/{{i.id}}">{{i.nazwa}}</a></td>
+								<td>{{i.kategoria}}</td>
+								<td>{{i.cena}}</td>
+							</tr>
+						{% endfor %}
+
+					</table>
+				</div>
+			</div>
+			
+		</div>
+
+{% endblock content %}

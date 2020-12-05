@@ -1,0 +1,33 @@
+{% extends 'Aplikacja/main.html' %}
+
+{% block content %}
+
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h5>{{produkt.nazwa}}</h5>
+				</div>
+				<div class="card card-body">
+					<table class="table">
+						<tr>
+							<th>Produkt</th>
+							<th>Kategoria</th>
+							<th>Cena</th>
+						</tr>
+						
+							<tr>
+								<td>{{produkt.nazwa}}</td>
+								<td>{{produkt.kategoria}}</td>
+								<td>{{produkt.cena}}</td>
+							</tr>
+						
+
+					</table>
+				</div>
+			</div>
+			
+		</div>
+
+{% endblock content %}

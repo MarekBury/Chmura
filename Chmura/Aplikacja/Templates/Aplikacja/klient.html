@@ -1,0 +1,83 @@
+{% extends 'Aplikacja/main.html' %}
+
+{% block content %}
+
+	    <br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Klient: {{klient.name}}</h5>
+			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="">Aktualizuj klienta</a>
+			<a class="btn btn-outline-danger  btn-sm btn-block" href="">Usuń klienta</a>
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Informacje kontaktowe</h5>
+			<hr>
+			<p>Email: {{klient.email}} </p>
+			<p>Phone: {{klient.telefon}}</p>
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Ilość zamówień</h5>
+			<hr>
+			<h1 style="text-align: center;padding: 10px">{{zamowienia_ilosc}}</h1>
+		</div>
+	</div>
+</div>
+
+
+<br>
+<div class="row">
+	<div class="col">
+		<div class="card card-body">
+			<form method="get">
+
+		    <button class="btn btn-primary" type="submit">Szukaj</button>
+		  </form>
+		</div>
+	</div>
+	
+</div>
+<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Produkt</th>
+					<th>Kategoria</th>
+					<th>Data zamówienia</th>
+					<th>Status</th>
+					<th>Aktualizuj</th>
+					<th>Usuń</th>
+				</tr>
+
+				{% for zamowienie in zamowienia %}
+
+				<tr>
+					<td>{{zamowienie.produkt}}</td>
+					<td>{{zamowienie.kategoria}}</td>
+					<td>{{zamowienie.data_utworzenia}}</td>
+					<td>{{zamowienie.status}}</td>
+					<td><a class="btn btn-sm btn-info" href="">Aktualizuj</a></td>
+					<td><a class="btn btn-sm btn-danger" href="">Usuń</a></td>
+				</tr>
+
+
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

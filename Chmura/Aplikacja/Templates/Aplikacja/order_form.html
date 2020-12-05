@@ -1,0 +1,10 @@
+{% extends 'Aplikacja/main.html' %}
+{% load static %}
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" name="Wybierz">
+</form>
+{% endblock %}
