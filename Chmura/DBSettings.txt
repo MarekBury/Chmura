@@ -1,0 +1,1 @@
+DBHOST="SerwerMarek" DBNAME="bazamarek123" DBUSER="Marek" DBPASS="H@slo123"
