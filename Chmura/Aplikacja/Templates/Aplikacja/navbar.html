@@ -22,7 +22,7 @@
       </li>
     </ul>
   </div>
-  <span class="hello-msg">Witaj,{{request.user}} </span>
-  <span><a class="hello-msg" href="{% url 'logout' %}">Wyloguj się!</a></span>
+  <span class="hello-msg">Zalogowano jako: {{request.user}} </span>
+  <span><a class="hello-msg" href="{% url 'logout' %}">Wyloguj</a></span>
 
 </nav>
