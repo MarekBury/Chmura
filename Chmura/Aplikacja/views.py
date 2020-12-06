@@ -59,10 +59,10 @@ def home(request):
     ilosc_klientow = klient.count()
 
     ilosc_zamowien = zamowienia.count()
-    dostarczono = zamowienia.filter(status='Dostarczono').count()
-    wyslano = zamowienia.filter(status='W doręczeniu').count()
+    stygniecie = zamowienia.filter(status='Stygnięcie').count()
+    wypiekane = zamowienia.filter(status='Wypiekanie').count()
 
-    context = {'zamowienia':zamowienia, 'klient': klient,'ilosc_zamowien':ilosc_zamowien, 'dostarczono':dostarczono,'wyslano':wyslano}
+    context = {'zamowienia':zamowienia, 'klient': klient,'ilosc_zamowien':ilosc_zamowien, 'stygnace':stygniecie, 'wypiekane':wypiekane}
 
     return render(request, 'Aplikacja/dashboard.html', context)
 

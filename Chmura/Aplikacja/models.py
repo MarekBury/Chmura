@@ -21,8 +21,8 @@ class Tags(models.Model):
 
 class Produkt(models.Model):
     KATEGORIA = (
-        ('Domowe', 'Domowe'),
-        ('Zewnętrzne', 'Zewnętrzne'),
+        ('Baza', 'Baza'),
+        ('Toping', 'Toping'),
     )
 
     nazwa = models.CharField(max_length=80, null=True)
@@ -40,8 +40,8 @@ class Produkt(models.Model):
 class Zamowienie(models.Model):
     STATUS = (
         ('Oczekiwanie', 'Oczekiwanie'),
-        ('W doręczeniu', 'W doręczeniu'),
-        ('Dostarczono', 'Dostarczono'),
+        ('Wypiekanie', 'Wypiekanie'),
+        ('Stygnięcie', 'Stygnięcie'),
     )
 
     klient = models.ForeignKey(Users, null=True, on_delete=models.SET_NULL)
